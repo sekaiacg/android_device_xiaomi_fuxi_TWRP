@@ -163,6 +163,7 @@ qbt_handler.ko
 hung_task_enh.ko
 qti-fixed-regulator.ko
 qti-ocp-notifier.ko
+wl2866d.ko
 hvc_gunyah.ko
 msm_geni_serial.ko
 frpc-adsprpc.ko
