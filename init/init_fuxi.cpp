@@ -84,7 +84,9 @@ void vendor_load_properties() {
 	if (sku == "fuxi") {
 		model_property_override("fuxi", "fuxi", "Xiaomi 13");
 	} else if (sku == "nuwa") {
-		model_property_override("nuwa", "nuwa", "Xiaomi 13 Pro");    
+		model_property_override("nuwa", "nuwa", "Xiaomi 13 Pro");
+	} else if (sku == "ishtar") {
+		model_property_override("ishtar", "ishtar", "Xiaomi 13 Ultra");
 	} else if (sku == "socrates") {
 		if (hwversion == "4.2.9" || hwversion == "4.9.9") {
 			model_property_override("socrates", "socrates", "Redmi K60 Champion Edition");
