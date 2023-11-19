@@ -57,4 +57,12 @@ on property:twrp.modules.loaded=true
     wait /sys/class/power_supply/battery
     start health-hal-2-1
     start vibratorfeature-hal-service
+    setprop twrp.decrypt.fix.device ${ro.boot.hardware.sku}
     umount /firmware
+
+on property:twrp.decrypt.fix.device=ishtar
+    stop vendor.qseecomd
+    stop vendor.keymint-qti
+    start vendor.qseecomd
+    start vendor.keymint-qti
+    setprop twrp.decrypt.fix.done true

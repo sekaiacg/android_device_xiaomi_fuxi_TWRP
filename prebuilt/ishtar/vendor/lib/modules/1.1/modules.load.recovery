@@ -9,6 +9,7 @@ camcc-kalama.ko
 qcom_ipcc.ko
 qcom_ipc_logging.ko
 qcom-pdc.ko
+thermal_minidump.ko
 qcom_tsens.ko
 rpmh-regulator.ko
 bwmon.ko
@@ -48,8 +49,10 @@ mem_buf.ko
 memory_dump_v2.ko
 minidump.ko
 msm_dma_iommu_mapping.ko
+pinctrl-crow.ko
 pinctrl-kalama.ko
 qnoc-kalama.ko
+qnoc-crow.ko
 ns.ko
 nvmem_qcom-spmi-sdam.ko
 phy-qcom-ufs.ko
@@ -61,6 +64,7 @@ qcom-dcvs.ko
 qcom-dload-mode.ko
 qcom_dma_heaps.ko
 qcom_hwspinlock.ko
+debug_symbol.ko
 qcom_logbuf_vh.ko
 qcom_iommu_util.ko
 qcom_llcc_pmu.ko
@@ -94,6 +98,8 @@ c1dcvs_vendor.ko
 c1dcvs_scmi.ko
 hwid.ko
 bcl_pmic5.ko
+nvme-core.ko
+nvme.ko
 mi_memory.ko
 extend_reclaim.ko
 perf_helper.ko
@@ -104,14 +110,19 @@ zsmalloc.ko
 mi_power.ko
 dump_display.ko
 msm_sysstats.ko
-kunit.ko
+cpq.ko
 msm_show_resume_irq.ko
 mhi.ko
+mhi_cntrl_qcom.ko
 mhi_dev_uci.ko
+mhi_dev_netdev.ko
+mhi_dev_dtr.ko
 mhi_dev_satellite.ko
 phy-qcom-ufs-qmp-v4-waipio.ko
 phy-qcom-ufs-qmp-v4.ko
 phy-qcom-ufs-qmp-v4-khaje.ko
+phy-qcom-ufs-qmp-v4-lahaina.ko
+phy-qcom-ufs-qmp-v4-kona.ko
 pinctrl-spmi-gpio.ko
 pinctrl-spmi-mpp.ko
 pwm-qti-lpg.ko
@@ -150,11 +161,13 @@ core_hang_detect.ko
 usb_bam.ko
 memlat.ko
 memlat_scmi.ko
+cpufreq_stats_scmi.ko
 rimps_log.ko
 qcom_ramdump.ko
 panel_event_notifier.ko
 dmesg_dumper.ko
 sys_pm_vx.ko
+qdss_bridge.ko
 fsa4480-i2c.ko
 msm_show_epoch.ko
 gh_tlmm_vm_mem_access.ko
@@ -173,6 +186,7 @@ rdbg.ko
 xlogchar.ko
 qcom_iommu_debug.ko
 lt9611uxc.ko
+qseecom_proxy.ko
 qcom-i2c-pmic.ko
 sg.ko
 spi-msm-geni.ko
@@ -194,6 +208,7 @@ ucsi_glink.ko
 usbmon.ko
 repeater.ko
 repeater-qti-pmic-eusb2.ko
+repeater-i2c-eusb2.ko
 redriver.ko
 nb7vpq904m.ko
 pm8941-pwrkey.ko
@@ -213,6 +228,7 @@ qcom-spmi-temp-alarm.ko
 bcl_soc.ko
 cpu_voltage_cooling.ko
 ddr_cdev.ko
+max31760_fan.ko
 msm_lmh_dcvs.ko
 policy_engine.ko
 qti_qmi_cdev.ko
@@ -227,6 +243,7 @@ qcom_lpm.ko
 leds-qti-flash.ko
 leds-qti-tri-led.ko
 memlat_vendor.ko
+cpufreq_stats_vendor.ko
 low_free_memory_kill.ko
 mi_mempool.ko
 binder_prio.ko
@@ -238,6 +255,7 @@ qcom_pil_info.ko
 rproc_qcom_common.ko
 qcom_q6v5.ko
 qcom_q6v5_pas.ko
+qcom_esoc.ko
 qcom_sysmon.ko
 qcom_glink.ko
 qcom_glink_smem.ko
@@ -246,6 +264,7 @@ gh_irq_lend.ko
 gh_mem_notifier.ko
 qcom-spmi-adc5-gen3.ko
 qcom-vadc-common.ko
+industrialio-buffer-cb.ko
 nvmem_qfprom.ko
 icc-test.ko
 migt.ko
@@ -282,6 +301,8 @@ snd-soc-hdmi-codec.ko
 qrtr-smd.ko
 qrtr-mhi.ko
 qrtr-gunyah.ko
+kunit.ko
+hdcp_qseecom_dlkm.ko
 smcinvoke_dlkm.ko
 bootinfo.ko
 debug_ext.ko
@@ -290,5 +311,6 @@ msm_ext_display.ko
 sync_fence.ko
 msm_hw_fence.ko
 msm-mmrm.ko
+hdcp_qseecom_dlkm.ko
 smcinvoke_dlkm.ko
 swinfo.ko
