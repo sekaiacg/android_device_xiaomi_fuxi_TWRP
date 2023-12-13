@@ -93,6 +93,8 @@ void vendor_load_properties() {
 		} else {
 			model_property_override("socrates", "socrates", "Redmi K60 Pro");
 		}
+	} else if (sku == "vermeer") {
+		model_property_override("vermeer", "vermeer", "Redmi K70");
 	} else {
 		model_property_override("unknow", "unknow", "unknow name");
 	}
