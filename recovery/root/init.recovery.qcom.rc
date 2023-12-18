@@ -59,10 +59,6 @@ on property:twrp.modules.loaded=true
     start vibratorfeature-hal-service
     umount /firmware
 
-on property:ro.twrp.hyperos.boot=true
-    stop vendor.qseecomd
-    stop vendor.keymint-qti
-    stop keystore2
-    start vendor.qseecomd
+on property:vendor.sys.listeners.registered=true
+    start gatekeeper-1-0
     start vendor.keymint-qti
-    start keystore2
