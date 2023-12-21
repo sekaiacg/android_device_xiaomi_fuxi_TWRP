@@ -81,21 +81,31 @@ void vendor_load_properties() {
 	property_override("ro.build.date.utc", "1640966400");
 	const std::string sku = GetProperty("ro.boot.hardware.sku", "");
 	const std::string hwversion = GetProperty("ro.boot.hwversion", "");
+#if defined(TW_RELEASE_DEVICE_FUXI) || defined(TW_RELEASE_DEVICE_NUWA) || defined(TW_RELEASE_DEVICE_ISHTAR) || defined(TW_RELEASE_DEVICE_SOCRATES) || defined(TW_RELEASE_DEVICE_VERMEER)
+#if defined(TW_RELEASE_DEVICE_FUXI)
 	if (sku == "fuxi") {
 		model_property_override("fuxi", "fuxi", "Xiaomi 13");
-	} else if (sku == "nuwa") {
+#elif defined(TW_RELEASE_DEVICE_NUWA)
+	if (sku == "nuwa") {
 		model_property_override("nuwa", "nuwa", "Xiaomi 13 Pro");
-	} else if (sku == "ishtar") {
+#elif defined(TW_RELEASE_DEVICE_ISHTAR)
+	if (sku == "ishtar") {
 		model_property_override("ishtar", "ishtar", "Xiaomi 13 Ultra");
-	} else if (sku == "socrates") {
+#elif defined(TW_RELEASE_DEVICE_SOCRATES)
+	if (sku == "socrates") {
 		if (hwversion == "4.2.9" || hwversion == "4.9.9") {
 			model_property_override("socrates", "socrates", "Redmi K60 Champion Edition");
 		} else {
 			model_property_override("socrates", "socrates", "Redmi K60 Pro");
 		}
-	} else if (sku == "vermeer") {
+#elif defined(TW_RELEASE_DEVICE_VERMEER)
+	if (sku == "vermeer") {
 		model_property_override("vermeer", "vermeer", "Redmi K70");
+#endif
 	} else {
 		model_property_override("unknow", "unknow", "unknow name");
 	}
+#else
+#error device name is not found!
+#endif
 }

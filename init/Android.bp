@@ -1,5 +1,24 @@
+bootstrap_go_package {
+    name: "soong-libinit_fuxi_defaults",
+    pkgPath: "device/xiaomi/fuxi/init/init_fuxi",
+    deps: [
+        "soong",
+        "soong-android",
+        "soong-cc"
+    ],
+    srcs: [
+        "libinit_fuxi_defaults.go",
+    ],
+    pluginFor: ["soong_build"]
+}
+
+libinit_fuxi_defaults {
+    name: "libinit_fuxi_defaults"
+}
+
 cc_library_static {
     name: "libinit_fuxi",
+    defaults: ["libinit_fuxi_defaults"],
     header_libs: [
         "libbase_headers",
     ],
