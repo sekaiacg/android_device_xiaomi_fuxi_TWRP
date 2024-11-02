@@ -179,7 +179,7 @@ TW_HAS_EDL_MODE := false
 # Custom cpu temperature path
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone35/temp"
 TW_BATTERY_SYSFS_WAIT_SECONDS := 6
-TW_BACKUP_EXCLUSIONS := /data/fonts
+TW_BACKUP_EXCLUSIONS := /data/fonts,/data/adb/ap,/data/adb/ksu
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
 TW_FRAMERATE := 60
 TW_AB_REC := true
